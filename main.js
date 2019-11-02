@@ -1,3 +1,4 @@
+//Скрипт для эффекта параллакс
 const parallax = document.getElementById("parallax");
 
 window.addEventListener("scroll", function ()
@@ -6,9 +7,11 @@ window.addEventListener("scroll", function ()
     parallax.style.backgroundPositionY = offset * 0.7 + "px";
 })
 
+//скрипт - эффект печати
 class TypeWriter 
 {
-    constructor(txtElement, words, wait = 3000) {
+    constructor(txtElement, words, wait = 3000) 
+    {
         this.txtElement = txtElement;
         this.words = words;
         this.txt = '';
@@ -18,7 +21,8 @@ class TypeWriter
         this.isDeleting = false;
     }
 
-    type() {
+    type() 
+    {
         const current = this.wordIndex % this.words.length;
         const fullTxt = this.words[current];
 
@@ -56,8 +60,6 @@ class TypeWriter
     }
 }
 
-
-
 document.addEventListener('DOMContentLoaded', init);
 
 function init()
@@ -68,16 +70,3 @@ function init()
 
     new TypeWriter(txtElement, words, wait);
 }
-
- 
-/*<script>
-$(document).ready(function(){
-    PopUpHide();
-});
-function PopUpShow(){
-    $("#popup1").show();
-}
-function PopUpHide(){
-    $("#popup1").hide();
-}
-</script>*/
