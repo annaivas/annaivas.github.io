@@ -81,3 +81,9 @@ div:nth-child(5)
   background-image: url(img/93-931641_clipart-writing-author-at-work-work-in-progress.png);
   background-size: auto;
 }
+
+div:nth-child(6)
+{
+    background-image: url(img/network_generic_image-100066598-orig.jpg);
+   background-size: cover;
+}

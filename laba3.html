@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Otchet</title>
+    <style>
+        body
+        {
+            background-color: lightslategray;
+        }    
+        </style>
+</head>
+
+<body>
+    <h1 align="center">Лабораторная работа 3 (вариант 8)</h1><br><br>
+    
+    <h3 align="center">Задачи:</h3><br>
+
+    <p align="center"><font color="#FFEFD5" face="Calibri" size="5">
+    1) Расчитать диапазон подсетей;<br>
+    2) Создать проект в Cisco Packet Tracer;<br>
+    <br><br><br>
+    </font></p>
+        
+    <h3 align="center">Выполнение заданий:</h3><br>
+    <p align="center"><font color="#FFFFFF" face="Calibri" size="5">
+    <b>1) Составим таблицу с расчетом подсетей:</b><br><br><br>
+    <table style="margin-left:auto;margin-right:auto;">
+        <colgroup>
+          <col span="1" style="background: darkseagreen"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+          <col span="3" style="background-color: lightskyblue"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+        </colgroup>
+        <tr>
+          <th>№ 8</th>
+          <th>LAN A</th>
+          <th>LAN B</th>
+          <th>LAN C</th>
+        </tr>
+        <tr>
+          <td>Количество узлов</td>
+          <td>323</td>
+          <td>13</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>Subnet</td>
+          <td>192.168.8.0</td>
+          <td>172.16.8.0</td>
+          <td>10.10.8.0</td>
+        </tr>
+        <tr>
+            <td>Mask</td>
+            <td>255.255.254.000</td>
+            <td>255.255.255.240</td>
+            <td>255.255.255.240</td>
+          </tr>
+          <tr>
+            <td>Broadcast</td>
+            <td>192.168.9.255</td>
+            <td>172.16.8.15</td>
+            <td>10.10.8.15</td>
+          </tr>
+      </table>
+      <p align="center"><font color="#FFFFFF" face="Calibri" size="5"></font>
+    <br>
+    Для связи двух маршрутизаторов используется отдельная подсеть,<br> в которой первый маршрутизатор - 15.15.8.1, а второй - 15.15.8.2.<br> Маска подсети: 255.255.255.252.
+        Subnet-адрес – 15.15.8.0<br>
+        Broadcast-адрес – 15.15.8.3<br>
+    <br>
+    <p align="center"><font color="#FFFFFF" face="Calibri" size="5"></font>
+    <b>2) В рабочем поле были размещены два компьютера и коммутатор, данная сеть А:</b><br><br>
+    <img style="vertical-align: auto" src="img/Screen Shot 2019-11-12 at 14.00.38.png" width="30%"/><br><br>
+    <b>3) Была добавлена ещё одна сеть Б. Между сетью А и сетью Б установлено соединение через маршрутизатор, <br>так как данное оборудование необходимо для работоспособности сети. Произведена настройка:</b><br><br>
+    <img style="vertical-align: auto" src="img/Screen Shot 2019-11-12 at 15.14.43.png" width="30%"/><br><br>
+    <b>4) Создана сеть С и через маршрутизатор подключена к сети А и Б. <br>При проведении настройки сети /30 необходимо было настроить статическую маршрутизацию, после чего установить пароли и баннер на сетевое оборудование:</b><br><br>
+    <img style="vertical-align: auto" src="img/Screen Shot 2019-11-12 at 15.jpg" width="30%"/><br><br>
+    <b>5) В работе были использованы следующие команды:</b><br><br>
+    
+        <code>route [сеть назначения] [маска] [маршрут] - для статической маршрутизации;<br>
+    enable password, enable secret - установка паролей;<br>
+    banner motd [баннер] - установка баннера;<br></code>
+    <br><br><br></font></p>
+
+    <p align="center"><font color="#FFFFFF" face="Calibri" size="3">(c) Иващик Анна, 2019<br><br><br></font></p>
+
+
+<script src="main.js"></script>
+</body>
+</html>
